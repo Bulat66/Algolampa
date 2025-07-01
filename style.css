@@ -86,9 +86,11 @@ body{
   font-style: normal;
 }
 .container img{
+	display: block;
+	width: 400px;
 	max-width: 100%;
 	border-radius: 18px;
-	margin-top: 18px;
+	margin: 18px auto;
 }
 .type-a{
 	display: flex;
@@ -164,7 +166,7 @@ body{
 table{
 	width: 280px;
 	max-width: 300px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	font-size: 14px;
 	color: white;
 	font-family: "Mulish", sans-serif;
@@ -183,9 +185,6 @@ table {
 td, th {
   border: 1px solid #ccc; /* Границы ячеек */
   padding: 8px;
-}
-img{
-	width: 400px;
 }
 @media (max-width: 1400px){
 	
@@ -218,7 +217,8 @@ img{
 	body{
 		padding: 0 18px;
 	}
-		#navigation{
+	#navigation{
+		padding: 20px;
 		font-size: 16px;
 	}
 	.container{
@@ -247,6 +247,7 @@ img{
 		padding: 0px 8px;
 	}
 	#navigation{
+
 		max-width: 300px;
 		font-size: 12px;
 	}
