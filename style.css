@@ -72,8 +72,6 @@ h2{
 }
 p{
 	display: block;
-	width: 100%;
-	max-width: 800px;
 	margin: 0 auto;
 	padding-bottom: 1rem;
 	font-size: 1.2rem;
@@ -121,7 +119,10 @@ td{
   rgba(255, 255, 255, 0.1)
 );
 }
-.box{
+.flex{
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
 	border: 1px solid black;
 	margin: 0 0 30px;
 	padding: 15px;
@@ -138,13 +139,14 @@ td{
   rgba(255, 255, 255, 0.1)
 );
 }
-.flex{
-	display: flex;
-	gap: 30px;
+.text{
+	display: block;
+	width: 60%;
+	min-width: 280px;
 }
 #logo{
 	display: block;
-	width: 150px;
+	width: 160px;
 	margin: 50px auto;
 	border-radius: 35px;
 	animation: pulse-shadow 4s infinite;
@@ -187,65 +189,106 @@ td{
 	text-shadow: #42aaff 1px 0 10px;
 	border-bottom-color: #42aaff;
 }
-
-.slider-box{
-	width: 100px;
-	height: 100px;
-
-	overflow: hidden;
-}
 .slider{
+	width: 300px;
+	aspect-ratio: 1;
+	overflow: hidden;
+	position: relative;	
+}
+.slide-box{
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 300%;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: 1s ease;
 }
 .slide{
-	height: 100%;
+	height: 300px;
 	aspect-ratio: 1;
 }
-.first-slide{
-	width: 100%;
-	background: url('img/Chlorella.jpg') no-repeat;
+#a-slider .first{
+	background: url('img/Chlorella.jpg');
+  background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
 }
-.second-slide{
-	background: url('img/Chlorella2.jpg') no-repeat;
+#a-slider .second{
+	background: url('img/Chlorella2.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
 }
-.third-slide{
-	background: url('img/Chlorella3.jpg') no-repeat;
+#a-slider .third{
+	background: url('img/Chlorella3.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#b-slider .first{
+	background: url('img/green.png');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#b-slider .second{
+	background: url('img/green2.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#b-slider .third{
+	background: url('img/green3.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#c-slider .first{
+	background: url('img/o2.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#c-slider .second{
+	background: url('img/o3.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#c-slider .third{
+	background: url('img/o4.jpg');
+	background-size: cover; /* Вписывает изображение целиком */
+  background-repeat: no-repeat;
+  background-position: center; /* Выравнивание по центру */
+}
+#colb{
+	width: 100px;
+
 }
 .tab{
 	display: inline-block;
 	width: 50px;
+	float: left;
 }
 .type-a{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.type-a .first{
-	aspect-ratio: 1;
-	height: 100%;
-	background: url('img/Chlorella.jpg') no-repeat;
-}
 .type-a .first p{
 	background: #102825;
 	border-radius: 15px;
 	border: 10px #45b2a4 solid;
 	padding: 20px;
-	
-  	position: relative;
+	position: relative;
   	top: 50%;
   	transform: translateY(-50%);
   	left: 60%;
   	box-shadow: 0 0 10px 10px black;
   	box-shadow: inset 0 0 10px 10px black;
-}
-.type-a .second{
-	aspect-ratio: 1;
-	height: 100%;
-	background: url('img/Chlorella2.jpg') no-repeat;
 }
 .type-a .second p{
 	background: #102825;
@@ -318,6 +361,9 @@ td{
 		font-size: 1rem;
 		padding: 0 26px;
 	}
+	#logo{
+		width: 90px;
+	}
 }
 @media (max-width: 768px){
 	body{
@@ -330,10 +376,14 @@ td{
 	.container p{
 		font-size: 18px;
 	}
+	#logo{
+		width: 80px;
+		border-radius: 25px;
+	}
 }
 @media (max-width: 567px){
 	body{
-		font-size: .8rem;
+		font-size: 12px;
 		padding: 0 18px;
 	}
 	#navigation{
@@ -346,11 +396,18 @@ td{
 	.flex{
 		flex-wrap: wrap;
 	}
+	#logo{
+		width: 70px;
+		border-radius: 20px;
+	}
 }
 @media (max-width: 480px){
 	body{
-		font-size: .7rem;
+		font-size: 10px;
 		padding: 0px 12px;
+	}
+	#logo{
+		width: 65px;
 	}
 	#partner-card{
 		font-size: .8rem;
@@ -362,5 +419,9 @@ td{
 	}
 	.container{
 		padding: 18px 12px;
+	}
+	#logo{
+		width: 60px;
+		border-radius: 15px;
 	}
 }
