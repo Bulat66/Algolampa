@@ -50,36 +50,34 @@
   font-style: normal;
 }
 body{
-	background: white;
-	margin: 0;
-	padding: 0 40px;
+	background: #102825;
 	font-size: 16px;
+	color: white;
 }
 h2, h3{
 	font-family: "WDXL Lubrifont JP N", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-align: center;
-	margin: 20px;
-	text-decoration: underline;
 	text-transform: uppercase;
 	line-height: 2;
 	letter-spacing: 4px;
-	background: white;
 }
 h2{
-	margin: 15px;
+	font-size: 2rem;
+}
+h3{
+	font-size: 1.5rem;
 }
 p{
 	display: block;
 	margin: 0 auto;
-	padding-bottom: 1rem;
-	font-size: 1.2rem;
+	padding: 1rem;
+	font-size: 1.3rem;
 	font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-style: normal;
   text-align: justify;
-  background: white;
 }
 img{
 	max-width: 45%;
@@ -90,59 +88,44 @@ tbody{
 td{
 	padding: 10px;
 }
-.glass-box {
-  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
-  backdrop-filter: blur(10px); /* Размытие фона за элементом */
-  -webkit-backdrop-filter: blur(10px); /* Для поддержки в Safari */
-  border-radius: 10px; /* Закругленные углы */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная граница */
-  padding: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Тень для глубины */
-  color: white; /* Цвет текста */
-  max-width: 600px;
-  margin: 20px;
-}
 .container{
 	width: 100%;
-	max-width: 900px;
+	max-width: 1440px;
 	margin: 0 auto 2.5rem;
-	background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
-  backdrop-filter: blur(10px); /* Размытие фона за элементом */
-  -webkit-backdrop-filter: blur(10px); /* Для поддержки в Safari */
-  border-radius: 10px; /* Закругленные углы */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная граница */
-  padding: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Тень для глубины */
-  background: linear-gradient(
-  top right bottom,
-  rgba(255, 255, 255, 0.2),
-  rgba(255, 255, 255, 0.1)
-);
+}
+.support{
+	width: 100%;
+	height: 350px;
+	max-width: none;
+	margin: 20px 0;
+	background: #4e9c75;
+	display: flex;
+	align-items: center;
+	box-shadow: 
+      inset 0 30px 45px 0px #102825, /* верхняя тень */
+      inset 0 -30px 45px 0px #102825;
+}
+.support p{
+	width: 650px;
+	font-size: 1.5rem;
+	text-align: center;
+	display: block;
+	border-radius: 15px;
+	background: #102825;
+	box-shadow: 0 0 15px 5px #102825;
 }
 .flex{
+	width: 100%;
+	margin: 0 auto;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-	gap: 20px;
-	border: 1px solid black;
-	margin: 0 0 30px;
-	padding: 15px;
-	background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
-  backdrop-filter: blur(10px); /* Размытие фона за элементом */
-  -webkit-backdrop-filter: blur(10px); /* Для поддержки в Safari */
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная граница */
-  padding: 20px;
-  box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.1); /* Тень для глубины */
-  background: linear-gradient(
-  top right bottom,
-  rgba(255, 255, 255, 0.2),
-  rgba(255, 255, 255, 0.1)
-);
 }
 .text{
 	display: block;
-	width: 60%;
-	min-width: 280px;
+}
+.key-word{
+	color: #84ff56;
 }
 #logo{
 	display: block;
@@ -162,35 +145,12 @@ td{
     box-shadow: 0 0 0 0 #007654; /* Возврат в исходное */
   }
 }
-
 .element {
   animation: pulse-shadow 4s infinite; /* Бесконечная анимация */
 }
-#navigation{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	max-width: 400px;
-	margin: 0px auto 40px;
-	font-size: 20px;
-	font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-.navigation-elem{
-	border-bottom: 2px solid white;
-	cursor: pointer;
-}
-.navigation-elem:hover{
-	color: #42aaff;
-	text-shadow: #42aaff 1px 0 10px;
-	border-bottom-color: #42aaff;
-}
 .slider{
-	width: 300px;
+	min-width: 400px;
+	height: 400px;
 	aspect-ratio: 1;
 	overflow: hidden;
 	position: relative;	
@@ -207,7 +167,7 @@ td{
 	transition: 1s ease;
 }
 .slide{
-	height: 300px;
+	height: 100%;
 	aspect-ratio: 1;
 }
 #a-slider .first{
@@ -271,7 +231,6 @@ td{
 .tab{
 	display: inline-block;
 	width: 50px;
-	float: left;
 }
 .type-a{
 	display: flex;
@@ -302,8 +261,6 @@ td{
   right: 60%;
   box-shadow: 0 0 10px 10px black;
   box-shadow: inset 0 0 10px 10px black;
-}
-.type-b{
 }
 .btn-box{
 	width: 270px;
