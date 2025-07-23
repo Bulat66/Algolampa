@@ -100,13 +100,22 @@ header{
 	width: 100%;
 	height: 140px;
 	background: #2e746b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 50%;
+	min-width: 500px;
 }
 .header-flex{
 	margin: 0 auto;
-	width: 50%;
-	min-width: 500px;
 	height: 100%;
 	display: flex;
+	gap: 20px;
 	align-items: center;
 	justify-content: space-evenly;
 }
@@ -157,7 +166,6 @@ main{
 .type-b{
 	width: 100%;
 	max-width: none;
-	height: 300px;
 	background: #4e9c75;
 	display: flex;
 	align-items: center;
@@ -416,8 +424,10 @@ main{
 	p{
 		padding: .8rem;
 	}
-	.type-b .box{
-		width: 400px;
+	.type-b{
+		padding: 2rem;
+	}
+	.type-b .box{		
 	}
 	.type-c .flex{
 		flex-wrap: wrap;
@@ -443,11 +453,16 @@ main{
 	body{
 		font-size: 8px;
 	}
+	.header-flex{
+		position: fixed;
+		top: -120%;
+		display: block;
+	}
 	.container{
 		padding: .6rem;
 	}
 	.type-b{
-		padding: 2rem 0;
+		padding: 2rem;
 	}
 	.support{
 		padding: 2rem 0;
