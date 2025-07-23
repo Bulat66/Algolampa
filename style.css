@@ -62,18 +62,19 @@ h2, h3{
 	text-transform: uppercase;
 	line-height: 2;
 	letter-spacing: 4px;
+	color: #74e8ae;
 }
 h2{
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 h3{
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 }
 p{
 	display: block;
 	margin: 0 auto;
-	padding: 1rem;
-	font-size: 1.3rem;
+	padding: 0  1rem 1rem 1rem;
+	font-size: 1.1rem;
 	font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-style: normal;
@@ -82,37 +83,118 @@ p{
 img{
 	max-width: 45%;
 }
+svg{
+	min-width: 200px;
+}
 tbody{
 	display: block;
 }
 td{
 	padding: 10px;
 }
+header{
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 140px;
+	background: #2e746b;
+}
+.header-flex{
+	margin: 0 auto;
+	width: 50%;
+	min-width: 500px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.header-flex li{
+	font-size: 1.4rem;
+	cursor: pointer;
+	color: white;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.header-flex li:hover{
+	text-decoration: underline;
+}
+#logo{
+	display: block;
+	width: 100px;
+	border-radius: 35px;
+	animation: pulse-shadow 4s infinite;
+}
+/*@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+  70% {
+    box-shadow: 0 0 15px 10px white;
+  }
+  100% {
+    box-shadow: 0 0 0 0 white;
+  }
+}*/
+main{
+	margin-top: 200px;
+}
 .container{
 	width: 100%;
 	max-width: 1440px;
-	margin: 0 auto 2.5rem;
+	margin: 1.25rem auto;
 }
-.support{
+.type-a{
+	display: flex;
+	align-items: center;
+	padding: 0 40px;
+}
+.type-b{
 	width: 100%;
-	height: 350px;
 	max-width: none;
-	margin: 20px 0;
+	height: 300px;
 	background: #4e9c75;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+}
+.type-b .box{
+	width: 600px;
+	background: #102825;
+	border-radius: 20px;
+}
+.type-c{
+	padding: 0 40px;
+}
+.support{
+	width: 100%;
+	padding: 2rem;
+	max-width: none;
+	background: #4e9c75;
 	box-shadow: 
       inset 0 30px 45px 0px #102825, /* верхняя тень */
       inset 0 -30px 45px 0px #102825;
+      
+	box-shadow: 0 0 15px 5px #102825;
+
 }
-.support p{
-	width: 650px;
-	font-size: 1.5rem;
+.support .flex{
+	width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background: #102825;
+	border-radius: 20px;
+}
+.support .flex p{
 	text-align: center;
 	display: block;
-	border-radius: 15px;
-	background: #102825;
-	box-shadow: 0 0 15px 5px #102825;
+	padding: 0;
 }
 .flex{
 	width: 100%;
@@ -127,31 +209,11 @@ td{
 .key-word{
 	color: #84ff56;
 }
-#logo{
-	display: block;
-	width: 160px;
-	margin: 50px auto;
-	border-radius: 35px;
-	animation: pulse-shadow 4s infinite;
-}
-@keyframes pulse-shadow {
-  0% {
-    box-shadow: 0 0 0 0 #007654; /* Начальная тень */
-  }
-  70% {
-    box-shadow: 0 0 15px 10px #007654; /* Расширяется и исчезает */
-  }
-  100% {
-    box-shadow: 0 0 0 0 #007654; /* Возврат в исходное */
-  }
-}
-.element {
-  animation: pulse-shadow 4s infinite; /* Бесконечная анимация */
-}
 .slider{
 	min-width: 400px;
 	height: 400px;
 	aspect-ratio: 1;
+	border-radius: 20px;
 	overflow: hidden;
 	position: relative;	
 }
@@ -226,28 +288,14 @@ td{
 }
 #colb{
 	width: 100px;
-
+}
+#Chlorella{
+	width: 200px;
+	height: 200px;
 }
 .tab{
 	display: inline-block;
 	width: 50px;
-}
-.type-a{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.type-a .first p{
-	background: #102825;
-	border-radius: 15px;
-	border: 10px #45b2a4 solid;
-	padding: 20px;
-	position: relative;
-  	top: 50%;
-  	transform: translateY(-50%);
-  	left: 60%;
-  	box-shadow: 0 0 10px 10px black;
-  	box-shadow: inset 0 0 10px 10px black;
 }
 .type-a .second p{
 	background: #102825;
@@ -309,49 +357,82 @@ td{
 	}
 }
 @media (max-width: 1024px){
-	body{
-		padding: 0 30px;
-	}
 }
 @media (max-width: 992px){
-	body{
-		font-size: 1rem;
-		padding: 0 26px;
-	}
 	#logo{
 		width: 90px;
+	}
+	.header-flex li{
+		font-size: 1.2rem;
+	}
+	.slider{
+		min-width: 300px;
+		height: 300px;
+		aspect-ratio: 1;
 	}
 }
 @media (max-width: 768px){
 	body{
-		font-size: .9rem;
-		padding: 0 22px;
+		font-size: 14rem;
 	}
-	.container{
-		padding: 20px 18px;
+	svg{
+		min-width: 120px;
 	}
-	.container p{
-		font-size: 18px;
+	.slider{
+		min-width: 250px;
+		height: 250px;
+	}
+	#Chlorella{
+		width: 120px;
+	}
+	.type-a{
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+	}
+	.support .flex{
+		width: 400px;
+	}
+	.support .flex p{
+		padding: 1rem;
 	}
 	#logo{
 		width: 80px;
 		border-radius: 25px;
 	}
 }
+@media (max-width: 650px){
+	.type-c .flex{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.type-c .flex:nth-child(2) .slider{
+		display: none;
+	}
+}
 @media (max-width: 567px){
 	body{
 		font-size: 12px;
-		padding: 0 18px;
 	}
+	p{
+		padding: .8rem;
+	}
+	.type-b .box{
+		width: 400px;
+	}
+	.type-c .flex{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
 	#navigation{
 		padding: 20px;
 		font-size: 16px;
 	}
-	.container{
-		padding: 18px 16px;
-	}
 	.flex{
 		flex-wrap: wrap;
+	}
+	.support .flex{
+		width: 300px;
 	}
 	#logo{
 		width: 70px;
@@ -360,8 +441,16 @@ td{
 }
 @media (max-width: 480px){
 	body{
-		font-size: 10px;
-		padding: 0px 12px;
+		font-size: 8px;
+	}
+	.container{
+		padding: .6rem;
+	}
+	.type-b{
+		padding: 2rem 0;
+	}
+	.support{
+		padding: 2rem 0;
 	}
 	#logo{
 		width: 65px;
@@ -371,14 +460,11 @@ td{
 	}
 }
 @media (max-width: 320px){
-	body{
-		padding: 0px 8px;
-	}
-	.container{
-		padding: 18px 12px;
-	}
 	#logo{
 		width: 60px;
 		border-radius: 15px;
+	}
+	.support .flex{
+		width: 260px;
 	}
 }

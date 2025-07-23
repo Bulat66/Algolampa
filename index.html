@@ -9,208 +9,17 @@
 <body>
 
 <header>
-	<img src="img/logo.png" alt="" id="logo">
-	<div class="shadow"></div>
+	<ul class="header-flex">
+    <img src="img/logo.png" alt="" id="logo">
+    <li>главная</li>
+    <li>о нас</li>
+    <li>дополнительно</li>
+	</ul>
 </header>
 
 <main>
-<div class="container">
-	<h2>Альголампа</h2>
-	<p>
-		<span class="tab"></span>Технология производства альголамп, предназначенных очищать воздух от пыли, насыщать его влажностью и повышать в нём уровень кислорода предназначена для использования в домах, квартирах, учебных помещениях, характеризующихся высоким содержанием пыли, низким содержанием кислорода и влажности.
-	</p>
-	<p>
-		<span class="tab"></span>Альголампа - инновационное изобретение, использующее в своей основе хлореллу (одноклеточная водоросль), которая обладает высокой способностью к фотосинтезу. Под действием фиолетового света фитолампы происходит процесс роста и развития водоросли, что приводит к высокой производительности кислорода, предназначенного для работы нашего организма. Вместе с этим в разработке содержатся фильтры воздуха, очищающие его от мелкодисперсной пыли и специальные датчики, измеряющие содержание кислорода, время работы фитолампы и температуру среды
-	</p>
-</div>
-
-<div class="container">
-	<h2>Хлорелла</h2>
-	<p>
-		<span class="tab"></span>Хлорелла <span class='key-word'>(Chlorella vulgaris)</span> — это одноклеточная зелёная водоросль, которая играет важную роль в производстве кислорода и очистке воздуха. Вот её основные полезные свойства:
-	</p>
-
-	<div class="flex">
-		
-		<div class="text">
-			<h3>Фотосинтез</h3>
-			<p>
-				<span class="tab"></span>Хлорелла, как и другие зелёные водоросли, активно участвует в фотосинтезе, поглощая углекислый газ <span class="key-word">(CO₂)</span> и выделяя кислород <span class="key-word">(O₂)</span>. Благодаря быстрому размножению и высокой плотности хлорофилла хлорелла производит больше кислорода, чем многие наземные растения (до 5 раз эффективнее, чем деревья на той же площади). Благодаря этому свойству её применяют в замкнутых экосистемах (например, в космических станциях или подводных аппаратах) для поддержания баланса O₂ и CO₂.
-			</p>
-		</div>
-		
-		<div class="slider" id='a-slider'>
-			<div class="slide-box">
-				<div class="slide first"></div>
-				<div class="slide second"></div>
-				<div class="slide third"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="flex">
-		<div class="slider" id=b-slider>
-			<div class="slide-box">
-				<div class="slide first"></div>
-				<div class="slide second"></div>
-				<div class="slide third"></div>
-			</div>
-		</div>
-		
-		<div class="text">
-			<h3>Очищение воздуха</h3>
-			<p>
-				<span class="tab"></span>Но и это ещё не всё. Хлорелла способна поглощать не только CO₂, но и вредные вещества из воздуха: Связывает и выводит из окружающей среды свинец, ртуть, кадмий и другие загрязнители. Может разлагать некоторые летучие органические соединения, улучшая качество воздуха. Используется в системах очистки сточных вод и промышленных выбросов.
-			</p>
-		</div>
-	</div>
-
-	<div class="flex">
-		
-		<div class="text">
-			<h3>Удобство</h3>
-			<p>
-				<span class="tab"></span>Хлорелла обладает быстрым ростом и не требует больших площадей, может культивироваться в биореакторах. Помогает снижать уровень CO₂ в атмосфере, что важно для борьбы с глобальным потеплением.
-			Что позволяет людям со всего мира использовать её в качестве установки, способной использоваться для очистки воздуха в помещениях и на улицах.
-			</p>
-		</div>
-		<div class="slider">
-			<div class="slide-box" id='c-slider'>
-				<div class="slide first"></div>
-				<div class="slide second"></div>
-				<div class="slide third"></div>
-			</div>
-		</div>
-	</div>
-
-</div>
-<div class="container support" style='display: flex;'>
-	<svg width="200" height="300" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Банка -->
-  <rect x="50" y="20" width="100" height="260" rx="10" fill="#d9d9d9" stroke="#333" stroke-width="2" opacity="0.8"/>
-  <rect x="60" y="280" width="80" height="10" fill="#b3b3b3" stroke="#333" stroke-width="1"/>
-  
-  <!-- Жидкость -->
-  <rect x="55" y="100" width="90" height="180" rx="5" fill="#2e8b57" opacity="0.7"/>
-  
-  <!-- Пузырьки (анимированные) -->
-  <circle cx="100" cy="250" r="4" fill="#a8e6cf" opacity="0.8">
-    <animate attributeName="cy" values="250;150;150" dur="3s" begin="0s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="opacity" values="0.8;0.8;0" dur="3s" begin="0s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="r" values="4;6;0" dur="3s" begin="0s" repeatCount="indefinite" fill="freeze"/>
-  </circle>
-  
-  <circle cx="120" cy="230" r="3" fill="#a8e6cf" opacity="0.8">
-    <animate attributeName="cy" values="230;130;130" dur="2.5s" begin="0.5s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="opacity" values="0.8;0.8;0" dur="2.5s" begin="0.5s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="r" values="3;5;0" dur="2.5s" begin="0.5s" repeatCount="indefinite" fill="freeze"/>
-  </circle>
-  
-  <circle cx="80" cy="270" r="5" fill="#a8e6cf" opacity="0.8">
-    <animate attributeName="cy" values="270;170;170" dur="4s" begin="1s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="opacity" values="0.8;0.8;0" dur="4s" begin="1s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="r" values="5;7;0" dur="4s" begin="1s" repeatCount="indefinite" fill="freeze"/>
-  </circle>
-  
-  <!-- Ещё пузырьки -->
-  <circle cx="90" cy="220" r="2" fill="#a8e6cf" opacity="0.8">
-    <animate attributeName="cy" values="220;120;120" dur="2s" begin="0.3s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="opacity" values="0.8;0.8;0" dur="2s" begin="0.3s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="r" values="2;4;0" dur="2s" begin="0.3s" repeatCount="indefinite" fill="freeze"/>
-  </circle>
-  
-  <circle cx="110" cy="260" r="3" fill="#a8e6cf" opacity="0.8">
-    <animate attributeName="cy" values="260;160;160" dur="3.5s" begin="0.7s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="opacity" values="0.8;0.8;0" dur="3.5s" begin="0.7s" repeatCount="indefinite" fill="freeze"/>
-    <animate attributeName="r" values="3;5;0" dur="3.5s" begin="0.7s" repeatCount="indefinite" fill="freeze"/>
-  </circle>
-</svg>
-
-<svg width="120" height="200" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Контур банки (схематичный) -->
-  <path d="M60,20 L90,20 C100,20 110,30 110,40 L110,180 C110,190 100,200 90,200 L30,200 C20,200 10,190 10,180 L10,40 C10,30 20,20 30,20 L60,20" 
-        fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-  
-  <!-- Дно банки -->
-  <line x1="30" y1="200" x2="90" y2="200" stroke="#333" stroke-width="3"/>
-  
-  <!-- Жидкость (плоский зелёный цвет) -->
-  <rect x="20" y="80" width="80" height="120" rx="2" fill="#4CAF50" fill-opacity="0.7"/>
-  
-  <!-- Пузырьки (просто кружки + анимация) -->
-  <g fill="#ffffff" fill-opacity="0.9">
-    <!-- Большой пузырь -->
-    <circle cx="40" cy="160" r="3">
-      <animate attributeName="cy" values="160;100;100" dur="3s" begin="0s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;1;0" dur="3s" begin="0s" repeatCount="indefinite"/>
-    </circle>
-    <!-- Маленькие пузыри -->
-    <circle cx="60" cy="140" r="2">
-      <animate attributeName="cy" values="140;80;80" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;1;0" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="80" cy="180" r="2">
-      <animate attributeName="cy" values="180;120;120" dur="4s" begin="0.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;1;0" dur="4s" begin="0.7s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-</svg>
-
-<svg width="150" height="220" viewBox="0 0 150 220" xmlns="http://www.w3.org/2000/svg">
-  <!-- Стильная стеклянная банка -->
-  <path d="M75,20 C95,20 110,35 110,55 L110,185 C110,200 95,210 75,210 C55,210 40,200 40,185 L40,55 C40,35 55,20 75,20 Z" 
-        fill="none" stroke="#78909C" stroke-width="1.5" stroke-opacity="0.8"/>
-  
-  <!-- Металлическое горлышко -->
-  <path d="M65,20 L85,20 C90,20 95,25 95,30 L95,40 C95,45 90,50 85,50 L65,50 C60,50 55,45 55,40 L55,30 C55,25 60,20 65,20 Z" 
-        fill="#CFD8DC" stroke="#78909C" stroke-width="1"/>
-  
-  <!-- Жидкость с градиентом -->
-  <defs>
-    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#81C784" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0.8"/>
-    </linearGradient>
-  </defs>
-  <path d="M45,60 C45,45 60,40 75,40 C90,40 105,45 105,60 L105,190 C105,195 100,200 95,200 L55,200 C50,200 45,195 45,190 Z" 
-        fill="url(#liquidGrad)" stroke="none"/>
-  
-  <!-- Красивые пузырьки -->
-  <g fill="#E8F5E9" fill-opacity="0.95">
-    <!-- Центральные пузыри -->
-    <circle cx="75" r="4">
-      <animate attributeName="cy" values="190;100;100" dur="4s" begin="0s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="4s" keyTimes="0;0.3;1" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Боковые пузыри -->
-    <circle cx="65" r="3">
-      <animate attributeName="cy" values="180;90;90" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="3.5s" keyTimes="0;0.4;1" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle cx="85" r="3">
-      <animate attributeName="cy" values="170;80;80" dur="3.8s" begin="0.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="3.8s" keyTimes="0;0.4;1" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Мелкие пузырьки -->
-    <circle cx="70" r="2">
-      <animate attributeName="cy" values="160;70;70" dur="3s" begin="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="3s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle cx="80" r="2">
-      <animate attributeName="cy" values="150;60;60" dur="2.8s" begin="1.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="2.8s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  
-  <!-- Блики на стекле -->
-  <path d="M70,30 C75,25 80,25 85,30 L80,40 C75,35 70,35 70,40 Z" fill="white" fill-opacity="0.3"/>
-</svg>
-
-<svg width="160" height="240" viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+<div class="container type-a">
+  <svg width="160" height="240" viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
   <!-- Стильная стеклянная банка -->
   <defs>
     <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -271,8 +80,82 @@
     </circle>
   </g>
 </svg>
+	<div class="text"> <h2>Альголампа</h2>
+	 <p>
+		  <span class="tab"></span>Технология производства альголамп, предназначенных очищать воздух от пыли, насыщать его влажностью и повышать в нём уровень кислорода предназначена для использования в домах, квартирах, учебных помещениях, характеризующихся высоким содержанием пыли, низким содержанием кислорода и влажности.
+	   </p>
+	   <p>
+		  <span class="tab"></span>Альголампа - инновационное изобретение, использующее в своей основе хлореллу (одноклеточная водоросль), которая обладает высокой способностью к фотосинтезу. Под действием фиолетового света фитолампы происходит процесс роста и развития водоросли, что приводит к высокой производительности кислорода, предназначенного для работы нашего организма. Вместе с этим в разработке содержатся фильтры воздуха, очищающие его от мелкодисперсной пыли и специальные датчики, измеряющие содержание кислорода, время работы фитолампы и температуру среды
+	   </p>
+  </div>
+</div>
 
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<div class="container type-b">
+	<div class="box">
+    <h2>Хлорелла</h2>
+	   <p>
+		<span class="tab"></span>Хлорелла <span class='key-word'>(Chlorella vulgaris)</span> — это одноклеточная зелёная водоросль, которая играет важную роль в производстве кислорода и очистке воздуха. Вот её основные полезные свойства:
+	  </p>
+  </div>
+</div>
+<div class="container type-c">
+	<div class="flex">
+		
+		<div class="text">
+			<h3>Фотосинтез</h3>
+			<p>
+				<span class="tab"></span>Хлорелла, как и другие зелёные водоросли, активно участвует в фотосинтезе, поглощая углекислый газ <span class="key-word">(CO₂)</span> и выделяя кислород <span class="key-word">(O₂)</span>. Благодаря быстрому размножению и высокой плотности хлорофилла хлорелла производит больше кислорода, чем многие наземные растения (до 5 раз эффективнее, чем деревья на той же площади). Благодаря этому свойству её применяют в замкнутых экосистемах (например, в космических станциях или подводных аппаратах) для поддержания баланса O₂ и CO₂.
+			</p>
+		</div>
+		
+		<div class="slider" id='a-slider'>
+			<div class="slide-box">
+				<div class="slide first"></div>
+				<div class="slide second"></div>
+				<div class="slide third"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="flex">
+		<div class="slider" id=b-slider>
+			<div class="slide-box">
+				<div class="slide first"></div>
+				<div class="slide second"></div>
+				<div class="slide third"></div>
+			</div>
+		</div>
+		
+		<div class="text">
+			<h3>Очищение воздуха</h3>
+			<p>
+				<span class="tab"></span>Но и это ещё не всё. Хлорелла способна поглощать не только CO₂, но и вредные вещества из воздуха: Связывает и выводит из окружающей среды свинец, ртуть, кадмий и другие загрязнители. Может разлагать некоторые летучие органические соединения, улучшая качество воздуха. Используется в системах очистки сточных вод и промышленных выбросов.
+			</p>
+		</div>
+	</div>
+
+	<div class="flex">
+		
+		<div class="text">
+			<h3>Удобство</h3>
+			<p>
+				<span class="tab"></span>Хлорелла обладает быстрым ростом и не требует больших площадей, может культивироваться в биореакторах. Помогает снижать уровень CO₂ в атмосфере, что важно для борьбы с глобальным потеплением.
+			Что позволяет людям со всего мира использовать её в качестве установки, способной использоваться для очистки воздуха в помещениях и на улицах.
+			</p>
+		</div>
+		<div class="slider">
+			<div class="slide-box" id='c-slider'>
+				<div class="slide first"></div>
+				<div class="slide second"></div>
+				<div class="slide third"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="container support">
+  <div class="flex">
+<svg id='Chlorella' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <!-- Фон - схематичная капля воды -->
   <circle cx="100" cy="100" r="80" fill="#E3F2FD" stroke="#BBDEFB" stroke-width="2"/>
   
@@ -330,6 +213,7 @@
 		Работа выполнена при поддержке гранта Фонда содействия инновациям, предоставленного в рамках программы <span class="key-word">"Студенческий стартап"</span> Федерального проекта <span class="key-word">"Платформа университетского технологического предпринимательнства"</span>
 
 	</p>
+</div>
 </div>
 </main>
 
