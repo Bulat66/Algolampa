@@ -31,7 +31,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 *,*:before,*:after{
 	margin: 0;
 	padding: 0;
@@ -109,15 +108,16 @@ header .flex{
 	align-items: center;
 	justify-content: space-evenly;
 	width: 50%;
-	min-width: 500px;
+	min-width: 600px;
+
 }
 .header-flex{
-	margin: 0 auto;
 	height: 100%;
 	display: flex;
 	gap: 20px;
 	align-items: center;
 	justify-content: space-evenly;
+	z-index: 4;
 }
 .header-flex li{
 	font-size: 1.4rem;
@@ -137,19 +137,13 @@ header .flex{
 	display: block;
 	width: 100px;
 	border-radius: 35px;
-	animation: pulse-shadow 4s infinite;
+	z-index: 6;
 }
-/*@keyframes pulse-shadow {
-  0% {
-    box-shadow: 0 0 0 0 white;
-  }
-  70% {
-    box-shadow: 0 0 15px 10px white;
-  }
-  100% {
-    box-shadow: 0 0 0 0 white;
-  }
-}*/
+#btn{
+	display: none;
+	position: relative;
+	z-index: 6;
+}
 main{
 	margin-top: 200px;
 }
@@ -165,6 +159,7 @@ main{
 }
 .type-b{
 	width: 100%;
+	padding: 2rem;
 	max-width: none;
 	background: #4e9c75;
 	display: flex;
@@ -178,6 +173,9 @@ main{
 }
 .type-c{
 	padding: 0 40px;
+}
+.type-c .flex{
+	margin-bottom: 2.4rem;
 }
 .support{
 	width: 100%;
@@ -305,46 +303,6 @@ main{
 	display: inline-block;
 	width: 50px;
 }
-.type-a .second p{
-	background: #102825;
-	border-radius: 15px;
-	border: 10px #45b2a4 solid;
-	padding: 20px;
-	color: white;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 60%;
-  box-shadow: 0 0 10px 10px black;
-  box-shadow: inset 0 0 10px 10px black;
-}
-.btn-box{
-	width: 270px;
-	margin: 30px auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.btn-box .btn{
-	width: 80px;
-	height: 40px;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-bottom: 2px white solid;
-	font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  cursor: pointer;
-}
-.btn-box .btn:hover{
-	color: #42aaff;
-	text-shadow: #42aaff 1px 0 10px;
-	border-bottom-color: #42aaff;
-}
 #partner-card{
 	display: block;
 	line-height: 1.2rem;
@@ -370,6 +328,7 @@ main{
 	#logo{
 		width: 90px;
 	}
+
 	.header-flex li{
 		font-size: 1.2rem;
 	}
@@ -385,6 +344,9 @@ main{
 	}
 	svg{
 		min-width: 120px;
+	}
+	.header-flex li{
+		font-size: 1rem;
 	}
 	.slider{
 		min-width: 250px;
@@ -433,11 +395,6 @@ main{
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	
-	#navigation{
-		padding: 20px;
-		font-size: 16px;
-	}
 	.flex{
 		flex-wrap: wrap;
 	}
@@ -453,10 +410,64 @@ main{
 	body{
 		font-size: 8px;
 	}
+	header{
+		height: 200px;
+
+	}
+	header .flex{
+		width: 200px;
+		position: fixed;
+		display: flex;
+		gap: 60px;
+		align-items: center;
+		justify-content: center;
+		}
 	.header-flex{
+		width: 100vh;
+		background: #2e746b;	
+		height: 90vh;
 		position: fixed;
 		top: -120%;
 		display: block;
+		transition: 1s ease;
+		display: flex;
+		gao: 80px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 3;
+	}
+	#btn{
+		display: block;
+		width: 60px;
+		height: 60px;
+		aspect-ratio: 1;
+		border-radius: 15px;
+		background: #63feff;
+		pasition: relative;
+	}
+	.arrow-elem{
+		width: 28px;
+		height: 8px;
+		position: absolute;
+		background: white;
+		transform-origin: center;
+		top: 50%;
+		transition: 1s ease;
+	}
+	.arrow-elem:nth-child(1){
+		transform: rotate(45deg);
+		left: 8px;		
+	}
+	.arrow-elem:nth-child(2){
+		transform: rotate(-45deg);
+		right: 8px;
+	}
+	.active:nth-child(1){
+		transform: rotate(-45deg);
+	}
+	.active:nth-child(2){
+		transform: rotate(45deg);
 	}
 	.container{
 		padding: .6rem;

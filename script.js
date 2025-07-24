@@ -39,3 +39,35 @@ function moveSlider2(){
   }
 }
 let intervalId2 = setInterval(moveSlider2, 3400);
+
+//NAVIGATION
+
+let nav = document.getElementById('header-flex');
+let arrow = document.getElementsByClassName('arrow-elem');
+
+let btn = document.getElementById('btn');
+let nav_step = 1;
+
+function show_Navigation(){
+  console.log('hi');
+  if(nav_step % 2 != 0){
+    nav.style.top = 0;
+    animation_Navigation();
+
+    nav_step++;
+  } else {
+    nav.style.top = `-120%`;
+    animation_Navigation();
+
+    nav_step++
+  }
+}
+
+function animation_Navigation(){
+  for (let i =  arrow.length - 1; i >= 0; i--) {
+    let a = -1;
+      arrow[i].classList.toggle('active');
+  }
+}
+
+btn.addEventListener('click', show_Navigation);
