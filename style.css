@@ -411,8 +411,7 @@ main{
 		font-size: 8px;
 	}
 	header{
-		height: 200px;
-
+		height: 150px;
 	}
 	header .flex{
 		width: 200px;
